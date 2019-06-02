@@ -1,10 +1,14 @@
 import React from 'react';
 import {View,Text} from 'react-native';
+import TextInputComponent from './common/TextInputComponent';
+import ButtonComponent from './common/ButtonComponent';
+
 
 export const EditProfile = () =>{
     return(
         <View>
-            <Text>This is EditProfile Page</Text>
+            <TextInputComponent />
+            <ButtonComponent />
         </View>
     )
 }

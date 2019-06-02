@@ -9,8 +9,8 @@ export const Home = (props) =>{
             <View style={styles.header}></View>
 
             <View style={styles.footer}>
-                <ButtonComponent passProps={props} title="SignIn"/>
-                <ButtonComponent passProps={props} title="SignUp"/>
+                <ButtonComponent passProps={props} title="SignIn" linkName="Profile"/>
+                <ButtonComponent passProps={props} title="SignUp" linkName="ThirdPartySignUp"/>
             </View>
         </View>
     )

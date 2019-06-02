@@ -1,10 +1,12 @@
 import { View, Text, StyleSheet,TouchableOpacity } from 'react-native';
 import React from 'react';
+import PropsTypes from 'prop-types';
 
 const ButtonComponent = (props) =>{
+    console.log(props)
     return(
         <View style={styles.container}>  
-            <TouchableOpacity onPress={()=>props.passProps.navigation.navigate('Profile')}>
+            <TouchableOpacity onPress={()=>props.passProps.navigation.navigate(props.linkName)}>
                 <Text style={styles.textStyle}>{props.title}</Text>
             </TouchableOpacity>
         </View>
@@ -12,6 +14,11 @@ const ButtonComponent = (props) =>{
 }
 
 module.exports = ButtonComponent
+
+ButtonComponent.PropsTypes = {
+    title: PropsTypes.string,
+    linkName: PropsTypes.string
+}
 
 const styles = StyleSheet.create({
     container:{
