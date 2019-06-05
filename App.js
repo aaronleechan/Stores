@@ -11,7 +11,7 @@ const AppContainer = createAppContainer(MainNavigator);
 
 const store = createStore(reducers,applyMiddleware(ReduxThunk))
 
-const App = () =>{
+const App = (props) =>{
   return(
     <Provider store={store}>
       <AppContainer/>

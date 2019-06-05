@@ -3,7 +3,6 @@ import React from 'react';
 import PropsTypes from 'prop-types';
 
 const ButtonComponent = (props) =>{
-    console.log(props)
     return(
         <View style={styles.container}>  
             <TouchableOpacity onPress={()=>props.passProps.navigation.navigate(props.linkName)}>
@@ -33,6 +32,7 @@ const styles = StyleSheet.create({
         borderColor: 'white',
         justifyContent: 'center',
         backgroundColor: '#B7BABF',
+        alignItems: 'center'
     },
     textStyle:{
         fontSize: 28,

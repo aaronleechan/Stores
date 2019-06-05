@@ -1,25 +1,49 @@
-import React from 'react';
-import {View,Text,StyleSheet,Image,TouchableOpacity,ScrollView,Dimensions } from 'react-native';
-
+import React,{useState} from 'react';
+import {View,Text,StyleSheet,TouchableOpacity,ScrollView,Dimensions,Image,Button,Animated } from 'react-native';
+import Icon from 'react-native-vector-icons/SimpleLineIcons'
+import FooterScreen from '../components/common/FooterComponent';
+import SmallCardComponent from './common/SmallCardComponent';
+import BigCardComponent from './common/BigCardComponent'
+import ItemComponent from './common/ItemComponent'
+import ActionComponent from './common/ActionComponent'
 const screenWidth = Dimensions.get('window').width;
+const screenHeight = Dimensions.get('window').height;
+
 
 export const Profile = (props) =>{
+    const [count,setCount] = useState(0);
     return(
         <View style={styles.container}>
-            <ScrollView>
-                <View style={styles.header}>
-                    <Text>This is Scroll View</Text>
-                    <Text>This is Scroll View</Text>
-                    <Text>This is Scroll View</Text>
-                </View>
-            </ScrollView>
+            <Animated.ScrollView scrollEventThrottle={16} style={styles.scrollviewContainer}>
+                <View><Text style={styles.titleContainer}>Available List</Text></View>
+                <ScrollView horizontal={true}>
+                    <SmallCardComponent/>
+                    <SmallCardComponent/>
+                    <SmallCardComponent/>
+                    <SmallCardComponent/>
+                    <SmallCardComponent/>
+                </ScrollView>
 
-            <View style={styles.footer}>
-                <Text style={styles.textStyle}>Aarlic</Text>
-                <TouchableOpacity onPress={()=>props.navigation.navigate('EditProfile')}>
-                    <Image source={require('../images/profile.png')}/>
-                </TouchableOpacity>
-            </View>
+                <View><Text style={styles.titleContainer}>All Food List</Text></View>
+                <ScrollView horizontal={true}>
+                    <BigCardComponent picsource={require('../images/burger.jpg')}/>
+                    <BigCardComponent icon="picture" size={40}/>
+                    <BigCardComponent icon="picture" size={40}/>
+                    <BigCardComponent icon="picture" size={40}/>
+                    <BigCardComponent icon="picture" size={40}/>
+                    <BigCardComponent icon="picture" size={40}/>
+                </ScrollView>
+
+                <View><Text style={styles.titleContainer}>Action</Text></View>
+                <ScrollView horizontal={true}>
+                    <TouchableOpacity onPress={() => props.navigation.navigate('CreateFoodMenu')}> 
+                        <ActionComponent icon="plus" title="Add Item" size={100}/>
+                    </TouchableOpacity>
+                </ScrollView>
+                
+                
+            </Animated.ScrollView>
+            <FooterScreen passProps={props}/>
         </View>
     )
 }
@@ -29,30 +53,15 @@ module.exports = Profile
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        alignItems: 'stretch',
     },
-    header:{
-
+    scrollviewContainer:{
+        flex: 1,
+        padding: 10,
+        marginBottom: 70
     },
-    footer:{
-        position: 'absolute',
-        width: screenWidth,
-        bottom: 0,
-        height: 50,
-        backgroundColor: 'grey',
-        justifyContent: 'space-between',
-        alignItems: 'stretch',
-        flexDirection: 'row',
-
-    },
-    textStyle:{
-        fontWeight: 'bold',
-        textShadowColor: 'blue',
-        textShadowRadius: 1,
-        fontFamily: 'Cochin',
+    titleContainer:{
         fontSize: 30,
-        paddingLeft: 5, 
+        fontFamily: 'Cochin',
+        fontWeight: 'bold',
     }
-
-
 })
