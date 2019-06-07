@@ -30,7 +30,7 @@ export const BigCardComponent = (props) => {
         if(props.picsource){
             return(
                 <View>
-                    <Image style={styles.imageStyle} source={require('../../images/salad.jpg')}/>
+                    <Image style={styles.imageStyle} source={require('../../images/burger.jpg')}/>
                     <View style={styles.availableButtonStyle}>
                         <TouchableOpacity>
                             <Text style={styles.availableButtonTextStyle}>Available</Text>

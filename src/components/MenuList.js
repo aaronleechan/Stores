@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/SimpleLineIcons'
 import FooterScreen from './common/FooterComponent'
 import ItemComponent from './common/ItemComponent'
 const screenWidth = Dimensions.get('window').width;
-const screenHeight = Dimensions.get('window').height;
+import ButtonComponent from './common/ButtonComponent';
 
 export const MenuList = (props) =>{
     const [count,setCount] = useState(0);
@@ -32,9 +32,11 @@ module.exports = MenuList
 const styles = StyleSheet.create({
     container:{
         flex: 1,
+        justifyContent: 'center',
     },
     scrollviewContainer:{
-        marginBottom: 70
+        flex: 4,
+        marginBottom: 70,
     },
     inContainer:{
         flexDirection: 'column',

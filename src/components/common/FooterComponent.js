@@ -9,6 +9,7 @@ const FooterComponent = (props) =>{
         <View style={styles.footer}>
             <TouchableOpacity onPress={()=>props.passProps.navigation.navigate('Profile')}><Icon name="home" size={30} /></TouchableOpacity>
             <TouchableOpacity onPress={()=>props.passProps.navigation.navigate('MenuList')}><Icon name="list" size={30} /></TouchableOpacity>
+            <TouchableOpacity onPress={()=>props.passProps.navigation.navigate('OrderPage')}><Icon name="basket" size={30} /></TouchableOpacity>
             <TouchableOpacity onPress={()=>props.passProps.navigation.navigate('ContactUs')}><Icon name="speech" size={30} /></TouchableOpacity>
             <TouchableOpacity onPress={()=>props.passProps.navigation.navigate('Menu')}><Icon name="menu" size={30} /></TouchableOpacity>
         </View>
