@@ -1,23 +1,18 @@
 import React,{useState} from 'react';
-import {View,Text,StyleSheet,TouchableOpacity,ScrollView,Dimensions,Image,Button,Animated } from 'react-native';
+import {View,Text,StyleSheet,TouchableOpacity,ScrollView,Dimensions,Image,Button,Animated,FlatList } from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons'
 import FooterScreen from './common/FooterComponent'
 import ItemComponent from './common/ItemComponent'
 const screenWidth = Dimensions.get('window').width;
 import ButtonComponent from './common/ButtonComponent';
+import SimpleMenuList from './common/SimpleMenuList';
 
 export const MenuList = (props) =>{
     const [count,setCount] = useState(0);
     return(
         <View style={styles.container}>
-            <Animated.ScrollView scrollEventThrottle={16} style={styles.scrollviewContainer}>
-                <ItemComponent/>
-                <ItemComponent/>
-                <ItemComponent/>
-                <ItemComponent/>
-                <ItemComponent/>
-                <ItemComponent/>
-                <ItemComponent/>
+        <Animated.ScrollView scrollEventThrottle={16} style={styles.scrollviewContainer}>
+                <SimpleMenuList/>
                 <ItemComponent/>
                 <ItemComponent/>
                 <ItemComponent/>
@@ -34,8 +29,21 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
     },
+    itemStyle:{
+        fontSize: 20,
+    },
+    flatListContainer:{
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: 5,
+    },
+    titleStyle:{
+        fontSize: 30,
+        textAlign: 'center',
+    },
     scrollviewContainer:{
-        flex: 4,
+        flex: 1,
         marginBottom: 70,
     },
     inContainer:{

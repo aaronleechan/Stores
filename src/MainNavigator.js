@@ -9,6 +9,7 @@ import FooterScreen from './components/common/FooterComponent'
 import CreateFoodMenuScreen from './components/createFoodMenu'
 import MenuListScreen from './components/MenuList'
 import OrderPageScreen from './components/OrderPage'
+import CompleteScreen from '../src/components/Complete'
 
 export const MainNavigator = createStackNavigator({
         Footer: {screen: FooterScreen},
@@ -20,7 +21,8 @@ export const MainNavigator = createStackNavigator({
         Menu: {screen: MenuScreen},
         CreateFoodMenu: {screen: CreateFoodMenuScreen},
         MenuList: {screen: MenuListScreen},
-        OrderPage:{screen: OrderPageScreen}
+        OrderPage:{screen: OrderPageScreen},
+        Complete: {screen: CompleteScreen}
     },
     {
         initialRouteName: 'Home'

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text,StyleSheet,ScrollView } from 'react-native'
+import { View, Text,StyleSheet,ScrollView,Picker } from 'react-native'
 import ActionComponent from './common/ActionComponent'
 import TextInputComponent from './common/TextInputComponent'
 import ButtonComponent from './common/ButtonComponent'
@@ -36,8 +36,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     imageContainer:{
-        flex: 1,
         alignItems: 'center',
-        justifyContent: 'space-between',
     }
 })

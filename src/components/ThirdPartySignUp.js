@@ -5,7 +5,7 @@ import { View, Text } from 'react-native'
 export const ThirdPartySignUp = (props) =>{
     return(
         <View>
-            <Text>This is ThirdPartySignUp</Text>
+            <Text>This is Business Sign Up Page</Text>
         </View>
     )
 }

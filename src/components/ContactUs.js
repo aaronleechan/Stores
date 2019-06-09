@@ -7,9 +7,11 @@ import PropsTypes from 'prop-types';
 export const ContactUs = (props) =>{
     return(
         <View style={styles.container}>
-            <View><Text style={styles.textStyle}>How can we help ?</Text></View>
-            <BigCardComponent icon="phone" size={40} ContactNumber="xxx.xxx.1234"/>
-            <BigCardComponent icon="envelope-letter" size={40} ContactEnvelop="phyoaung03@gmail.com"/>
+            <View style={styles.innerContainer}>
+                <View><Text style={styles.textStyle}>How can we help ?</Text></View>
+                <BigCardComponent icon="phone" size={40} ContactNumber="xxx.xxx.1234"/>
+                <BigCardComponent icon="envelope-letter" size={40} ContactEnvelop="phyoaung03@gmail.com"/>
+            </View>
             <FooterScreen passProps={props}/>
         </View>
     )
@@ -20,6 +22,10 @@ module.exports = ContactUs
 const styles=StyleSheet.create({
     container:{
         flex: 1,
+    },
+    innerContainer:{
+        justifyContent: 'center',
+        flexDirection: 'column',
         alignSelf: 'center',
     },
     textStyle:{

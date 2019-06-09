@@ -21,6 +21,7 @@ ButtonComponent.PropsTypes = {
 
 const styles = StyleSheet.create({
     container:{
+        marginTop: 20,
         width: "50%",
         height: 50,
         padding: 10,

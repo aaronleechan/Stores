@@ -6,13 +6,11 @@ import Icon from 'react-native-vector-icons/Zocial'
 export const Home = (props) =>{
     return(
         <View style={styles.container}>
-
             <View style={styles.header}></View>
-
             <View style={styles.footer}>
                 <ButtonComponent passProps={props} title="Sign In" linkName="Profile"/>
                 <ButtonComponent passProps={props} title="SignUp" linkName="ThirdPartySignUp"/>
-                <Icon class="zocial icon facebook" name="facebook" size={20}> Sign In with FaceBook</Icon>
+                {/* <Icon class="zocial icon facebook" name="facebook" size={20}> Sign In with FaceBook</Icon> */}
             </View>
         </View>
     )

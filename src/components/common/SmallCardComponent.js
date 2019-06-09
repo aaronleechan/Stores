@@ -18,7 +18,6 @@ export const SmallCardComponent = (props) => {
 
     const imageSource = (props) =>{
         if(props.picsource){
-            console.log(props.picsource)
             return(
                 <View>
                     <Image style={styles.imageStyle} source={require('../../images/salad.jpg')}/>

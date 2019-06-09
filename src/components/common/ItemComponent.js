@@ -10,11 +10,12 @@ const ItemComponent = (props) =>{
     return(
         <View style={styles.itemContainer}>
             <View style={styles.imageContainer}>
-                <Image style={styles.imageStyle} source={require('../../images/lapadtote.jpg')}/>
+                <Image style={styles.imageStyle} source={require('../../images/burger.jpg')}/>
                 <View style={styles.imageOverlay}>
                     <Text style={styles.wordSize}>10$</Text>
                 </View>
             </View>
+            <View><Text style={styles.nameWordStyle}>Burger</Text></View>
             <TouchableOpacity style={styles.buttonContainer}>
                 <TouchableOpacity onPress={() => setCount(count-1)}><Icon name="minus" size={60}/></TouchableOpacity>
                 <View><Text style={styles.signContainer}>{count}</Text></View>
@@ -31,6 +32,11 @@ const styles = StyleSheet.create({
     },
     scrollviewContainer:{
         marginBottom: 70
+    },
+    nameWordStyle:{
+        fontSize: 20,
+        textAlign: 'center',
+        color: 'red',
     },
     wordSize:{
         fontSize: 20,
